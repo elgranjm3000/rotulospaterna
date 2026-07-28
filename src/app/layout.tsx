@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Rótulos Paterna",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Rótulos Paterna - Soluciones Visuales Profesionales",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rótulos Paterna | Soluciones Visuales Profesionales en Valencia",
     description: "Expertos en rotulación profesional, vinilos y soluciones visuales a medida en Paterna, Valencia.",
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
