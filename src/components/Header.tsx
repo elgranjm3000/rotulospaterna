@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 const navLinks = [
   { name: "Servicios", href: "#servicios" },
   { name: "Nosotros", href: "#nosotros" },
+  { name: "Contacto", href: "#contacto" },
 ];
 
 export function Header() {
@@ -31,24 +32,25 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all ${
-        isScrolled ? "shadow-md py-2" : "shadow-sm py-4"
+        isScrolled ? "shadow-md py-3" : "shadow-sm py-4"
       }`}
     >
-      <nav className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center">
-        <div className="flex items-center gap-2">
+      <nav className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4">
+        {/* Logo */}
+        <a href="#" className="flex-shrink-0">
           <img
             src="/logo.png"
             alt="Rótulos Paterna"
             className="h-10 w-auto"
           />
-        </div>
+        </a>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Nav - Centered */}
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <a
               key={link.name}
-              className="font-inter text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
+              className="font-inter text-sm font-semibold text-on-surface hover:text-secondary-container transition-colors"
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
             >
@@ -58,16 +60,9 @@ export function Header() {
         </div>
 
         {/* CTA Button (Desktop) */}
-        <div className="hidden md:flex items-center gap-4">
-          <a
-            className="font-inter text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
-            href="#contacto"
-            onClick={(e) => handleNavClick(e, "#contacto")}
-          >
-            Contacto
-          </a>
+        <div className="hidden md:block flex-shrink-0">
           <button
-            className="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-md font-inter text-sm font-medium btn-hover-effect"
+            className="bg-secondary-container text-on-secondary-container px-5 py-2.5 rounded-lg font-inter text-sm font-bold btn-hover-effect shadow-md"
             onClick={() => {
               const target = document.querySelector("#contacto");
               if (target) target.scrollIntoView({ behavior: "smooth" });
@@ -79,11 +74,11 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden p-2 flex-shrink-0"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Abrir menú"
         >
-          <span className="material-symbols-outlined">
+          <span className="material-symbols-outlined text-3xl">
             {isMobileMenuOpen ? "close" : "menu"}
           </span>
         </button>
@@ -91,37 +86,32 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-surface border-t border-outline-variant/10">
-          <div className="px-margin-mobile py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white border-t border-surface-container">
+          <div className="px-margin-mobile py-6 flex flex-col gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
-                className="font-inter text-sm font-medium text-on-surface-variant hover:text-primary transition-colors py-2"
+                className="font-inter text-base font-semibold text-primary hover:text-secondary-container transition-colors py-3 px-2 rounded-lg hover:bg-surface-container-low"
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
               </a>
             ))}
-            <a
-              className="font-inter text-sm font-medium text-on-surface-variant hover:text-primary transition-colors py-2"
-              href="#contacto"
-              onClick={(e) => handleNavClick(e, "#contacto")}
-            >
-              Contacto
-            </a>
-            <button
-              className="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-md font-inter text-sm font-medium btn-hover-effect w-full"
-              onClick={() => {
-                const target = document.querySelector("#contacto");
-                if (target) {
-                  target.scrollIntoView({ behavior: "smooth" });
-                  setIsMobileMenuOpen(false);
-                }
-              }}
-            >
-              Pedir Presupuesto
-            </button>
+            <div className="pt-3">
+              <button
+                className="bg-secondary-container text-on-secondary-container px-6 py-3.5 rounded-lg font-inter text-base font-bold btn-hover-effect w-full shadow-md"
+                onClick={() => {
+                  const target = document.querySelector("#contacto");
+                  if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                    setIsMobileMenuOpen(false);
+                  }
+                }}
+              >
+                Pedir Presupuesto
+              </button>
+            </div>
           </div>
         </div>
       )}
