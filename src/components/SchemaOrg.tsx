@@ -5,16 +5,8 @@ const schemaOrg = {
   description:
     "Expertos en rotulación profesional, vinilos y soluciones visuales a medida en Paterna, Valencia. Transformamos fachadas en herramientas de venta con cajones de luz, letras corpóreas y vinilos decorativos.",
   url: "https://rotulospaterna.com",
-  telephone: "+34960000000",
+  telephone: "+34620049872",
   email: "info@rotulospaterna.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "C/ Principal, 123",
-    addressLocality: "Paterna",
-    addressRegion: "Valencia",
-    postalCode: "46980",
-    addressCountry: "ES",
-  },
   geo: {
     "@type": "GeoCoordinates",
     latitude: 39.5015,

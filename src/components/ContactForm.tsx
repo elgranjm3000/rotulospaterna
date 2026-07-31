@@ -3,32 +3,12 @@
 import { useState, FormEvent } from "react";
 import { useFadeIn } from "@/hooks/useFadeIn";
 
-const contactInfo = [
-  {
-    icon: "call",
-    label: "+34 960 000 000",
-    href: "tel:+34960000000",
-    description: "Llámanos directamente",
-  },
-  {
-    icon: "mail",
-    label: "info@rotulospaterna.com",
-    href: "mailto:info@rotulospaterna.com",
-    description: "Envíanos un email",
-  },
-  {
-    icon: "location_on",
-    label: "C/ Principal, 123",
-    sublabel: "Paterna, Valencia",
-    href: null,
-    description: "Visítanos en taller",
-  },
-];
-
 const projectTypes = [
   "Rotulación Luminosa",
   "Vinilos",
   "Letras Corpóreas",
+  "Rotulación de Vehículos",
+  "Fabricación de Rótulos",
   "Otro",
 ];
 
@@ -75,7 +55,7 @@ export function ContactForm() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Form Card */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden order-2 lg:order-1">
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
               {submitStatus === "success" ? (
                 <div className="h-full flex flex-col items-center justify-center text-center p-16">
                   <div className="w-24 h-24 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center mb-8 shadow-lg">
@@ -193,59 +173,85 @@ export function ContactForm() {
             </div>
 
             {/* Info & Map Column */}
-            <div className="space-y-6 order-1 lg:order-2">
-              {/* Contact Info Card - Maximum Contrast */}
+            <div className="space-y-6">
+              {/* Contact Info Card */}
               <div className="bg-white rounded-3xl shadow-2xl p-8 border-2 border-surface-container">
                 <div className="mb-8">
                   <h3 className="font-montserrat text-2xl font-bold mb-2 text-primary">
-                    Información de contacto
+                    Contacta con nosotros
                   </h3>
                   <p className="font-inter text-base text-on-surface-variant">
-                    Estamos aquí para ayudarte con tu proyecto
+                    Elige el canal que prefieras. Te respondemos rápido.
                   </p>
                 </div>
 
-                <div className="space-y-4 mb-8">
-                  {contactInfo.map((info, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start gap-4 p-5 bg-gradient-to-r from-surface-container-lowest to-surface-container-low rounded-2xl border-2 border-surface-container hover:border-secondary-container/30 transition-all group"
-                    >
-                      <div className="w-14 h-14 bg-gradient-to-br from-secondary-container to-amber-500 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform">
-                        <span className="material-symbols-outlined text-white text-2xl">
-                          {info.icon}
-                        </span>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-inter text-xs font-bold text-secondary-container uppercase tracking-wider mb-1">
-                          {info.description}
-                        </p>
-                        {info.href ? (
-                          <a
-                            href={info.href}
-                            className="font-montserrat text-lg font-bold text-primary hover:text-secondary-container transition-colors block"
-                          >
-                            {info.label}
-                          </a>
-                        ) : (
-                          <>
-                            <span className="font-montserrat text-lg font-bold text-primary block">
-                              {info.label}
-                            </span>
-                            {info.sublabel && (
-                              <span className="font-inter text-base text-on-surface-variant">
-                                {info.sublabel}
-                              </span>
-                            )}
-                          </>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                {/* WhatsApp - Prominent */}
+                <a
+                  href="https://wa.me/34620049872"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-5 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200 hover:border-green-400 transition-all group mb-4"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-inter text-xs font-bold text-green-600 uppercase tracking-wider mb-1">
+                      WhatsApp - Respuesta rápida
+                    </p>
+                    <span className="font-montserrat text-xl font-bold text-green-700">
+                      +34 620 049 872
+                    </span>
+                  </div>
+                  <span className="material-symbols-outlined text-green-500 group-hover:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
+                </a>
 
-                {/* Schedule Section - High Contrast */}
-                <div className="bg-gradient-to-r from-surface-container-lowest to-surface-container-low rounded-2xl p-6 mb-8">
+                {/* Phone */}
+                <a
+                  href="tel:+34620049872"
+                  className="flex items-start gap-4 p-5 bg-gradient-to-r from-surface-container-lowest to-surface-container-low rounded-2xl border-2 border-surface-container hover:border-secondary-container/30 transition-all group mb-3"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-secondary-container to-amber-500 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <span className="material-symbols-outlined text-white text-2xl">
+                      call
+                    </span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-inter text-xs font-bold text-secondary-container uppercase tracking-wider mb-1">
+                      Llámanos
+                    </p>
+                    <span className="font-montserrat text-lg font-bold text-primary block">
+                      +34 620 049 872
+                    </span>
+                  </div>
+                </a>
+
+                {/* Email */}
+                <a
+                  href="mailto:info@rotulospaterna.com"
+                  className="flex items-start gap-4 p-5 bg-gradient-to-r from-surface-container-lowest to-surface-container-low rounded-2xl border-2 border-surface-container hover:border-secondary-container/30 transition-all group mb-8"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-secondary-container to-amber-500 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <span className="material-symbols-outlined text-white text-2xl">
+                      mail
+                    </span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-inter text-xs font-bold text-secondary-container uppercase tracking-wider mb-1">
+                      Escríbenos
+                    </p>
+                    <span className="font-montserrat text-lg font-bold text-primary block">
+                      info@rotulospaterna.com
+                    </span>
+                  </div>
+                </a>
+
+                {/* Schedule */}
+                <div className="bg-gradient-to-r from-surface-container-lowest to-surface-container-low rounded-2xl p-6">
                   <h4 className="font-inter text-sm font-bold text-primary uppercase tracking-wider mb-4 flex items-center gap-2">
                     <span className="material-symbols-outlined text-secondary-container text-xl">
                       schedule
@@ -271,45 +277,9 @@ export function ContactForm() {
                     </div>
                   </div>
                 </div>
-
-                {/* Social Links - Enhanced */}
-                <div>
-                  <p className="font-inter text-sm font-bold text-primary uppercase tracking-wider mb-4">
-                    Síguenos
-                  </p>
-                  <div className="flex gap-3">
-                    <a
-                      href="#"
-                      className="w-14 h-14 rounded-xl bg-surface-container-low border-2 border-surface-container flex items-center justify-center hover:bg-secondary-container hover:border-secondary-container hover:text-white transition-all duration-300 group"
-                      aria-label="Facebook"
-                    >
-                      <span className="material-symbols-outlined text-primary group-hover:text-white group-hover:scale-110 transition-all">
-                        share
-                      </span>
-                    </a>
-                    <a
-                      href="#"
-                      className="w-14 h-14 rounded-xl bg-surface-container-low border-2 border-surface-container flex items-center justify-center hover:bg-secondary-container hover:border-secondary-container hover:text-white transition-all duration-300 group"
-                      aria-label="Instagram"
-                    >
-                      <span className="material-symbols-outlined text-primary group-hover:text-white group-hover:scale-110 transition-all">
-                        photo_camera
-                      </span>
-                    </a>
-                    <a
-                      href="#"
-                      className="w-14 h-14 rounded-xl bg-surface-container-low border-2 border-surface-container flex items-center justify-center hover:bg-secondary-container hover:border-secondary-container hover:text-white transition-all duration-300 group"
-                      aria-label="WhatsApp"
-                    >
-                      <span className="material-symbols-outlined text-primary group-hover:text-white group-hover:scale-110 transition-all">
-                        chat
-                      </span>
-                    </a>
-                  </div>
-                </div>
               </div>
 
-              {/* Google Map */}
+              {/* Google Map - Wide view of Paterna */}
               <div
                 ref={mapRef}
                 className={`rounded-3xl overflow-hidden shadow-2xl transition-all duration-1000 ${
@@ -324,16 +294,16 @@ export function ContactForm() {
                       <span className="material-symbols-outlined text-secondary-container text-xl">
                         location_on
                       </span>
-                      Rótulos Paterna
+                      Área de servicio
                     </p>
                     <p className="font-inter text-sm text-on-surface-variant font-medium">
-                      Paterna, Valencia
+                      Paterna y alrededores
                     </p>
                   </div>
 
-                  {/* Google Maps iframe */}
+                  {/* Google Maps - Wide view of Paterna (zoom level 13) */}
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-0.4495!3d39.5015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f123456789%3A0x123456789abcdef!2sPaterna%2C%20Valencia!5e0!3m2!1ses!2ses!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24614.20948133683!2d-0.4615!3d39.5015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f5e5e5e5e5e5%3A0x1234567890abcdef!2sPaterna%2C+Valencia!5e0!3m2!1ses!2ses!4v1722000000000!5m2!1ses!2ses"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -341,21 +311,8 @@ export function ContactForm() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="grayscale hover:grayscale-0 transition-all duration-500"
-                    title="Ubicación de Rótulos Paterna en Paterna, Valencia"
+                    title="Paterna, Valencia - Área de servicio de Rótulos Paterna"
                   />
-
-                  {/* Map Overlay Button */}
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=Paterna,+Valencia,+España"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute bottom-4 right-4 z-10 bg-secondary-container text-on-secondary-container px-6 py-4 rounded-xl font-inter text-sm font-bold shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
-                  >
-                    <span className="material-symbols-outlined text-base">
-                      directions
-                    </span>
-                    Cómo llegar
-                  </a>
                 </div>
               </div>
             </div>
