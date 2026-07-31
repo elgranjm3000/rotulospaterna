@@ -3,7 +3,7 @@
 import { useEffect, useState, useLayoutEffect } from "react";
 
 const heroBackgroundImage =
-  "https://images.unsplash.com/photo-1605106702734-205df224ecce?w=1920&q=80";
+  "https://images.pexels.com/photos/2694434/pexels-photo-2694434.jpeg?auto=compress&cs=tinysrgb&w=1920";
 
 export function Hero() {
   const [imageLoaded, setImageLoaded] = useState(false);
