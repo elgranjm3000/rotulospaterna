@@ -24,7 +24,7 @@ const benefits = [
 ];
 
 const craftImage =
-  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80";
+  "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80";
 
 export function WhyUs() {
   const { ref: sectionRef, isVisible: sectionVisible } = useFadeIn({ threshold: 0.1 });

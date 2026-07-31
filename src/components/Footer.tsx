@@ -5,7 +5,6 @@ import { useFadeIn } from "@/hooks/useFadeIn";
 const footerLinks = {
   empresa: [
     { name: "Servicios", href: "#servicios" },
-    { name: "Portafolio", href: "#portafolio" },
     { name: "Sobre Nosotros", href: "#nosotros" },
   ],
   legal: [
@@ -51,8 +50,8 @@ export function Footer() {
             />
           </div>
           <p className="font-inter text-base text-on-surface-variant leading-relaxed">
-            Soluciones profesionales de rotulación y comunicación visual en
-            Valencia. Calidad y compromiso desde 2008.
+            Expertos en rotulación, letras corpóreas y vinilos en
+            Paterna. Calidad y compromiso desde 2008.
           </p>
         </div>
 

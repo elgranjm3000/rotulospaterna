@@ -3,7 +3,7 @@
 import { useEffect, useState, useLayoutEffect } from "react";
 
 const heroBackgroundImage =
-  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&q=80";
+  "https://images.unsplash.com/photo-1605106702734-205df224ecce?w=1920&q=80";
 
 export function Hero() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -99,9 +99,9 @@ export function Hero() {
             </button>
             <button
               className="bg-surface-container-highest text-on-surface px-8 py-4 rounded-md font-montserrat text-xl font-semibold btn-hover-effect border-2 border-outline-variant/30"
-              onClick={() => handleScrollTo("#portafolio")}
+              onClick={() => handleScrollTo("#servicios")}
             >
-              Ver Proyectos
+              Nuestros Servicios
             </button>
           </div>
 
