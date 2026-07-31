@@ -4,9 +4,9 @@ const schemaOrg = {
   name: "Rótulos Paterna",
   description:
     "Fabricación de rótulos en Paterna: letras corpóreas, rotulación de fachadas, vinilos, rotulación de vehículos y rótulos luminosos. Rotulistas en Paterna desde 2008. Presupuesto sin compromiso.",
-  url: "https://rotulospaterna.com",
+  url: "https://rotulospaterna.vercel.app",
   telephone: "+34620049872",
-  email: "info@rotulospaterna.com",
+  email: "info@rotulospaterna.vercel.app",
   geo: {
     "@type": "GeoCoordinates",
     latitude: 39.5015,
@@ -27,7 +27,7 @@ const schemaOrg = {
     },
   ],
   priceRange: "€€",
-  image: "https://rotulospaterna.com/logo.png",
+  image: "https://rotulospaterna.vercel.app/logo.png",
   sameAs: [
     "https://www.facebook.com/rotulospaterna",
     "https://www.instagram.com/rotulospaterna",

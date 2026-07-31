@@ -43,11 +43,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://rotulospaterna.com"),
+  metadataBase: new URL("https://rotulospaterna.vercel.app"),
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://rotulospaterna.com",
+    url: "https://rotulospaterna.vercel.app",
     title: "Rótulos Paterna | Fabricación de Rótulos en Paterna",
     description:
       "Rótulos en Paterna: letras corpóreas, rotulación de fachadas, vinilos, rotulación de vehículos y rótulos luminosos. Fabricación propia en Paterna. ¡Presupuesto gratis!",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://rotulospaterna.com",
+    canonical: "https://rotulospaterna.vercel.app",
   },
   other: {
     "geo.region": "ES-VC",
