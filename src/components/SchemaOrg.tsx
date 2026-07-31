@@ -3,7 +3,7 @@ const schemaOrg = {
   "@type": "LocalBusiness",
   name: "Rótulos Paterna",
   description:
-    "Expertos en rotulación profesional, vinilos y soluciones visuales a medida en Paterna, Valencia. Transformamos fachadas en herramientas de venta con cajones de luz, letras corpóreas y vinilos decorativos.",
+    "Fabricación de rótulos en Paterna: letras corpóreas, rotulación de fachadas, vinilos, rotulación de vehículos y rótulos luminosos. Rotulistas en Paterna desde 2008. Presupuesto sin compromiso.",
   url: "https://rotulospaterna.com",
   telephone: "+34620049872",
   email: "info@rotulospaterna.com",
@@ -34,46 +34,60 @@ const schemaOrg = {
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Servicios de Rotulación",
+    name: "Servicios de Rotulación en Paterna",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Rotulación Luminosa",
+          name: "Fabricación de Rótulos en Paterna",
           description:
-            "Cajones de luz y letras retroiluminadas con tecnología LED de bajo consumo.",
+            "Diseño y fabricación de rótulos a medida en Paterna. Rótulos comerciales, señalética corporativa y banderolas luminosas.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Vinilos Decorativos",
+          name: "Letras Corpóreas en Paterna",
           description:
-            "Personalización total para escaparates y vehículos. Vinilos de corte, ácido o impresión digital.",
+            "Fabricación de letras corpóreas en acero, aluminio, PVC y metacrilato en Paterna. Con iluminación LED integrada.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Letras Corpóreas",
+          name: "Rotulación de Fachadas en Paterna",
           description:
-            "Elegancia y relieve para tu fachada. En acero, aluminio, PVC o metacrilato.",
+            "Rotulación integral de fachadas y escaparates en Paterna. Vinilos de corte, microperforados y láminas de control solar.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Rotulación de Vehículos en Paterna",
+          description:
+            "Rotulación integral de coches, furgonetas y camiones en Paterna. Vinilos de alta resistencia y diseño personalizado.",
         },
       },
     ],
   },
   areaServed: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      latitude: 39.5015,
-      longitude: -0.4495,
-    },
-    geoRadius: "50000",
+    "@type": "City",
+    name: "Paterna",
+    sameAs: "https://es.wikipedia.org/wiki/Paterna",
   },
+  knowsAbout: [
+    "Rótulos en Paterna",
+    "Rotulación de fachadas Paterna",
+    "Letras corpóreas Paterna",
+    "Rotulación de vehículos Paterna",
+    "Vinilos decorativos Paterna",
+    "Rótulos luminosos Paterna",
+    "Fabricación de rótulos Paterna",
+  ],
 };
 
 export function SchemaOrg() {

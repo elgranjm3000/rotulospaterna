@@ -18,9 +18,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rótulos Paterna | Soluciones Visuales Profesionales en Valencia",
-  description: "Expertos en rotulación profesional, vinilos y soluciones visuales a medida en Paterna, Valencia. Transformamos fachadas en herramientas de venta con cajones de luz, letras corpóreas y vinilos decorativos.",
-  keywords: ["rótulos", "rotulación", "vinilos", "letras corpóreas", "cajones luz", "Paterna", "Valencia", "rotulación profesional", "vinilos decorativos", "rotulación luminosa"],
+  title: "Rótulos Paterna | Fabricación e Instalación de Rótulos en Paterna",
+  description:
+    "Rótulos en Paterna: fabricación de letras corpóreas, rotulación de fachadas, vinilos y rotulación de vehículos en Paterna. Expertos en rótulos luminosos y banderolas LED. Presupuesto sin compromiso.",
+  keywords: [
+    "rótulos Paterna",
+    "rotulación Paterna",
+    "letras corpóreas Paterna",
+    "rotulación fachadas Paterna",
+    "rotulación vehículos Paterna",
+    "fabricación rótulos Paterna",
+    "rótulos luminosos Paterna",
+    "vinilos Paterna",
+    "banderolas Paterna",
+    "cajones luz Paterna",
+    "rótulos Valencia",
+    "rotulistas Paterna",
+  ],
   authors: [{ name: "Rótulos Paterna" }],
   creator: "Rótulos Paterna",
   publisher: "Rótulos Paterna",
@@ -34,22 +48,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: "https://rotulospaterna.com",
-    title: "Rótulos Paterna | Soluciones Visuales Profesionales en Valencia",
-    description: "Expertos en rotulación profesional, vinilos y soluciones visuales a medida en Paterna, Valencia.",
+    title: "Rótulos Paterna | Fabricación de Rótulos en Paterna",
+    description:
+      "Rótulos en Paterna: letras corpóreas, rotulación de fachadas, vinilos, rotulación de vehículos y rótulos luminosos. Fabricación propia en Paterna. ¡Presupuesto gratis!",
     siteName: "Rótulos Paterna",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Rótulos Paterna - Soluciones Visuales Profesionales",
+        alt: "Rótulos Paterna - Fabricación de rótulos en Paterna",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rótulos Paterna | Soluciones Visuales Profesionales en Valencia",
-    description: "Expertos en rotulación profesional, vinilos y soluciones visuales a medida en Paterna, Valencia.",
+    title: "Rótulos Paterna | Rótulos en Paterna",
+    description:
+      "Fabricación de rótulos, letras corpóreas, rotulación de fachadas y vehículos en Paterna. Expertos en rotulación. ¡Presupuesto gratis!",
     images: ["/og-image.png"],
   },
   robots: {
@@ -63,13 +79,14 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // Add your verification codes when available
-    // google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
-  },
   alternates: {
     canonical: "https://rotulospaterna.com",
+  },
+  other: {
+    "geo.region": "ES-VC",
+    "geo.placename": "Paterna",
+    "geo.position": "39.5015;-0.4495",
+    "ICBM": "39.5015, -0.4495",
   },
 };
 

@@ -57,7 +57,7 @@ export function Hero() {
             style={{ transitionDelay: "200ms" }}
           >
             <span className="inline-block py-1 px-3 rounded-full bg-secondary-fixed text-on-secondary-fixed font-inter text-xs font-semibold mb-6 uppercase tracking-wider">
-              Visibilidad que impacta
+              Rótulos en Paterna · Desde 2008
             </span>
           </div>
 
@@ -68,7 +68,7 @@ export function Hero() {
             }`}
             style={{ transitionDelay: "300ms" }}
           >
-            Hacemos que tu negocio sea{" "}
+            Rótulos en Paterna que hacen tu negocio{" "}
             <span className="text-secondary-container">imposible de ignorar</span>
           </h1>
 
@@ -79,8 +79,8 @@ export function Hero() {
             }`}
             style={{ transitionDelay: "400ms" }}
           >
-            Expertos en rotulación profesional, vinilos y soluciones visuales a
-            medida en Paterna. Transformamos fachadas en herramientas de venta.
+            Rótulos, letras corpóreas, vinilos y rotulación de fachadas en
+            Paterna. Fabricación propia. Presupuesto sin compromiso en 24h.
           </p>
 
           {/* CTAs */}
@@ -128,7 +128,7 @@ export function Hero() {
               <span className="material-symbols-outlined text-secondary-container">
                 location_on
               </span>
-              <span className="font-inter text-sm font-medium">Valencia y alrededores</span>
+              <span className="font-inter text-sm font-medium">Paterna y alrededores</span>
             </div>
           </div>
         </div>

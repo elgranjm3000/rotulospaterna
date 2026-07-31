@@ -50,8 +50,9 @@ export function Footer() {
             />
           </div>
           <p className="font-inter text-base text-on-surface-variant leading-relaxed">
-            Expertos en rotulación, letras corpóreas y vinilos en
-            Paterna. Calidad y compromiso desde 2008.
+            Rótulos en Paterna: fabricación de letras corpóreas, rotulación
+            de fachadas, vinilos y rotulación de vehículos. Expertos
+            rotulistas en Paterna desde 2008.
           </p>
         </div>
 

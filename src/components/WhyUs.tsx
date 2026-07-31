@@ -74,7 +74,7 @@ export function WhyUs() {
             }`}
           >
             <h2 className="font-montserrat text-3xl md:text-4xl font-semibold mb-8 text-primary">
-              ¿Por qué Rótulos Paterna?
+              Rotulistas en Paterna: ¿Por qué elegirnos?
             </h2>
 
             <div className="space-y-8">
