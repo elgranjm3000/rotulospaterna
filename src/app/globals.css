@@ -52,6 +52,18 @@ html {
   transform: scale(1.1);
 }
 
+/* Cinemagraph Pulse Animation */
+@keyframes cinemaPulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
 /* Fade In Animations */
 @keyframes fade-in-up {
   from {
