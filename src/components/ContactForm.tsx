@@ -187,7 +187,7 @@ export function ContactForm() {
 
                 {/* Email */}
                 <a
-                  href="mailto:info@rotulospaterna.vercel.app"
+                  href="mailto:contacto@rotulospaterna.com"
                   className="flex items-start gap-4 p-5 bg-gradient-to-r from-surface-container-lowest to-surface-container-low rounded-2xl border-2 border-surface-container hover:border-secondary-container/30 transition-all group mb-8"
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-secondary-container to-amber-500 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -200,7 +200,7 @@ export function ContactForm() {
                       Escríbenos
                     </p>
                     <span className="font-montserrat text-lg font-bold text-primary block">
-                      info@rotulospaterna.vercel.app
+                      contacto@rotulospaterna.com
                     </span>
                   </div>
                 </a>
