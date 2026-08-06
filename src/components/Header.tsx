@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { name: "Servicios", href: "#servicios" },
-  { name: "Nosotros", href: "#nosotros" },
-  { name: "Contacto", href: "#contacto" },
+  { name: "Servicios", href: "/#servicios" },
+  { name: "Nosotros", href: "/#nosotros" },
+  { name: "Contacto", href: "/#contacto" },
 ];
 
 export function Header() {
@@ -22,10 +22,14 @@ export function Header() {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const target = document.querySelector(href);
+    const hash = href.split("#")[1];
+    const target = document.getElementById(hash) || document.querySelector(`#${hash}`);
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
+    } else {
+      // Si no está en esta página (ej: blog), navegar a la landing
+      window.location.href = href;
     }
   };
 
@@ -64,8 +68,12 @@ export function Header() {
           <button
             className="bg-secondary-container text-on-secondary-container px-5 py-2.5 rounded-lg font-inter text-sm font-bold btn-hover-effect shadow-md"
             onClick={() => {
-              const target = document.querySelector("#contacto");
-              if (target) target.scrollIntoView({ behavior: "smooth" });
+              const target = document.getElementById("contacto");
+              if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+              } else {
+                window.location.href = "/#contacto";
+              }
             }}
           >
             Pedir Presupuesto
@@ -102,10 +110,12 @@ export function Header() {
               <button
                 className="bg-secondary-container text-on-secondary-container px-6 py-3.5 rounded-lg font-inter text-base font-bold btn-hover-effect w-full shadow-md"
                 onClick={() => {
-                  const target = document.querySelector("#contacto");
+                  const target = document.getElementById("contacto");
                   if (target) {
                     target.scrollIntoView({ behavior: "smooth" });
                     setIsMobileMenuOpen(false);
+                  } else {
+                    window.location.href = "/#contacto";
                   }
                 }}
               >
