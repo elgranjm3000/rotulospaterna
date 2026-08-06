@@ -103,13 +103,16 @@ export function WhyUs() {
               ))}
             </div>
 
-            {/* Additional CTA - Improved contrast */}
-            <button className="mt-10 inline-flex items-center gap-2 text-secondary-container font-inter text-sm font-semibold border-b-2 border-secondary-container pb-1 hover:text-secondary transition-colors">
+            {/* Additional CTA */}
+            <a
+              href="/proceso"
+              className="mt-10 inline-flex items-center gap-2 text-secondary-container font-inter text-sm font-semibold border-b-2 border-secondary-container pb-1 hover:text-secondary transition-colors"
+            >
               Conoce más sobre nuestro proceso
               <span className="material-symbols-outlined text-sm">
                 arrow_forward
               </span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
