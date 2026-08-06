@@ -33,10 +33,10 @@ export function Hero() {
     video.addEventListener("loadeddata", handleLoaded);
     video.addEventListener("error", handleError);
 
-    // Timeout fallback: si en 4s no carga, usar poster
+    // Timeout fallback: si en 8s no carga, usar poster
     const timeout = setTimeout(() => {
       if (!videoLoaded) setVideoError(true);
-    }, 4000);
+    }, 8000);
 
     return () => {
       video.removeEventListener("loadeddata", handleLoaded);
@@ -84,9 +84,9 @@ export function Hero() {
           />
         )}
 
-        {/* Overlay gradients for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
+        {/* Overlay: oscurece solo el lado izquierdo para legibilidad del texto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/10 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent z-10" />
 
         {/* Cinemagraph light effect: glow pulsante sutil sobre la zona del rótulo */}
         <div
