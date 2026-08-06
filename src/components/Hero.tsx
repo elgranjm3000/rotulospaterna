@@ -2,9 +2,9 @@
 
 import { useEffect, useState, useLayoutEffect, useRef } from "react";
 
-/* Cinemagraph: imagen de fachada con rótulo luminoso como elemento vivo */
+/* Cinemagraph: video de fondo con efecto de luz viva sobre rótulos */
 const heroVideo =
-  "https://cdn.coverr.co/videos/coverr-city-street-at-night-8436/1080p.mp4";
+  "https://videos.pexels.com/video-files/3130284/3130284-hd_1920_1080_30fps.mp4";
 
 const heroPoster =
   "https://images.pexels.com/photos/2694434/pexels-photo-2694434.jpeg?auto=compress&cs=tinysrgb&w=1920";
