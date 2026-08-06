@@ -148,11 +148,11 @@ export function PaternaServices() {
 
         {/* Bottom CTA Banner */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-br from-primary via-primary-container to-primary rounded-3xl p-10 md:p-14 shadow-2xl">
-            <h3 className="font-montserrat text-2xl md:text-3xl font-bold mb-4 text-white">
+          <div className="bg-primary rounded-3xl p-10 md:p-14 shadow-2xl">
+            <h3 className="font-montserrat text-2xl md:text-3xl font-bold mb-4 text-secondary-container">
               ¿Negocio en Paterna? Te ayudamos a destacar
             </h3>
-            <p className="font-inter text-base md:text-lg text-white/90 max-w-xl mx-auto mb-8">
+            <p className="font-inter text-base md:text-lg text-on-primary-container max-w-xl mx-auto mb-8">
               Cuéntanos tu idea y te asesoramos sin compromiso con la mejor
               solución de rotulación para tu proyecto en Paterna.
             </p>
