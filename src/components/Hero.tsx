@@ -3,29 +3,27 @@
 import { useState, useEffect } from "react";
 
 /*
- * CINEMAGRAPH CSS: secuencia de imágenes de rótulos reales
- * con transiciones suaves que crean efecto de "foto viva"
- *
- * Las imágenes muestran: fachada con rótulo, letras corpóreas,
- * vehículo rotulado, y taller de fabricación de rótulos.
+ * CINEMAGRAPH: 8 tipos de rótulos reales que muestran
+ * toda la gama de servicios de rotulación en Paterna.
+ * Cada imagen representa una categoría distinta.
  */
 
 const signageImages = [
-  /* 1. Rótulo de fachada comercial / storefront sign */
+  /* ① Rótulo fachada comercial / storefront shop sign */
   "https://images.pexels.com/photos/256150/pexels-photo-256150.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* 2. Rótulo luminoso tipo caja de luz / lightbox */
+  /* ② Caja de luz iluminada / LED lightbox sign */
   "https://images.pexels.com/photos/5593197/pexels-photo-5593197.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* 3. Letras corpóreas 3D / dimensional letters */
+  /* ③ Letras corpóreas 3D / acrylic dimensional letters */
   "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* 4. Rótulo neón / LED iluminado */
+  /* ④ Rótulo neón luminoso / glowing neon LED sign */
   "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* 5. Rótulo tradicional / clásico en fachada */
+  /* ⑤ Rótulo tradicional clásico / classic signwriting */
   "https://images.pexels.com/photos/189434/pexels-photo-189434.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* 6. Vinilo en cristalera / window decal */
+  /* ⑥ Vinilo en cristalera / window decal vinyl graphic */
   "https://images.pexels.com/photos/2694434/pexels-photo-2694434.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* 7. Rótulo corporativo / señalética profesional */
+  /* ⑦ Señalética corporativa / professional signage */
   "https://images.pexels.com/photos/3974774/pexels-photo-3974774.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* 8. Rótulo / letrero exterior iluminado */
+  /* ⑧ Letrero exterior iluminado / outdoor illuminated */
   "https://images.pexels.com/photos/3326871/pexels-photo-3326871.jpeg?auto=compress&cs=tinysrgb&w=1920",
 ];
 
