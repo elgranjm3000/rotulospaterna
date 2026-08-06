@@ -23,8 +23,7 @@ const benefits = [
   },
 ];
 
-const craftImage =
-  "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800";
+const craftImage = "/rotulos/images2.jpeg";
 
 export function WhyUs() {
   const { ref: sectionRef, isVisible: sectionVisible } = useFadeIn({ threshold: 0.1 });
