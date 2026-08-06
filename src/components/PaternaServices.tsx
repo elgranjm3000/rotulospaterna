@@ -148,7 +148,7 @@ export function PaternaServices() {
 
         {/* Bottom CTA Banner */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary via-surface-dim to-surface-container rounded-3xl p-10 md:p-14 shadow-2xl">
+          <div className="bg-gradient-to-br from-primary via-primary-container to-primary rounded-3xl p-10 md:p-14 shadow-2xl">
             <h3 className="font-montserrat text-2xl md:text-3xl font-bold mb-4 text-white">
               ¿Negocio en Paterna? Te ayudamos a destacar
             </h3>
