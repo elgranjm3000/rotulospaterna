@@ -3,7 +3,9 @@ import { Hero } from "@/components/Hero";
 import { PaternaServices } from "@/components/PaternaServices";
 import { WhyUs } from "@/components/WhyUs";
 import { ContactForm } from "@/components/ContactForm";
+import { BlogSection } from "@/components/BlogSection";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 export default function Home() {
   return (
@@ -14,8 +16,10 @@ export default function Home() {
         <PaternaServices />
         <WhyUs />
         <ContactForm />
+        <BlogSection />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }
