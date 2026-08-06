@@ -158,7 +158,7 @@ export function PaternaServices() {
             </p>
             <a
               href="#contacto"
-              className="inline-flex items-center gap-3 bg-on-secondary-container text-secondary-container px-10 py-5 rounded-xl font-montserrat text-xl font-bold hover:shadow-2xl transition-all"
+              className="inline-flex items-center gap-3 bg-white text-primary px-10 py-5 rounded-xl font-montserrat text-xl font-bold hover:shadow-2xl transition-all"
             >
               Pedir Presupuesto Gratis
               <span className="material-symbols-outlined">send</span>
