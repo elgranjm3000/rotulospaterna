@@ -1,119 +1,121 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useState, useEffect } from "react";
 
-/* Video cinemagraph de fondo - escena nocturna con rótulos luminosos */
-const HERO_VIDEO =
-  "https://videos.pexels.com/video-files/3130284/3130284-hd_1920_1080_30fps.mp4";
+/*
+ * CINEMAGRAPH CSS: secuencia de imágenes de rótulos reales
+ * con transiciones suaves que crean efecto de "foto viva"
+ *
+ * Las imágenes muestran: fachada con rótulo, letras corpóreas,
+ * vehículo rotulado, y taller de fabricación de rótulos.
+ */
 
-/* Imagen estática solo como respaldo si el video falla */
-const HERO_POSTER =
-  "https://images.pexels.com/photos/2694434/pexels-photo-2694434.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const signageImages = [
+  /* Fachada comercial con rótulo luminoso */
+  "https://images.pexels.com/photos/2694434/pexels-photo-2694434.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  /* Letras corpóreas en edificio corporativo */
+  "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  /* Vehículo comercial rotulado */
+  "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=1920",
+];
 
 export function Hero() {
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const [videoReady, setVideoReady] = useState(false);
-  const [videoFailed, setVideoFailed] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
+  /* Ciclo de imágenes estilo cinemagraph - transición cada 5 segundos */
   useEffect(() => {
     setIsVisible(true);
-
-    const video = videoRef.current;
-    if (!video) return;
-
-    const onReady = () => setVideoReady(true);
-    const onError = () => setVideoFailed(true);
-
-    video.addEventListener("canplay", onReady);
-    video.addEventListener("error", onError);
-
-    // Si no carga en 6s, mostrar fallback
-    const t = setTimeout(() => {
-      if (!videoReady) setVideoFailed(true);
-    }, 6000);
-
-    return () => {
-      video.removeEventListener("canplay", onReady);
-      video.removeEventListener("error", onError);
-      clearTimeout(t);
-    };
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % signageImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   const handleScrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const showVideo = videoReady && !videoFailed;
-  const showPoster = !videoReady || videoFailed;
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      {/* === VIDEO BACKGROUND (Cinemagraph) === */}
+      {/* === CINEMAGRAPH: imágenes de rótulos con transición suave === */}
       <div className="absolute inset-0 z-0">
-        {/* Video - siempre se renderiza, pero se oculta si falla */}
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            showVideo ? "opacity-100" : "opacity-0"
-          }`}
-          poster={HERO_POSTER}
-          preload="auto"
-        >
-          <source src={HERO_VIDEO} type="video/mp4" />
-        </video>
+        {signageImages.map((img, i) => (
+          <div
+            key={i}
+            className="absolute inset-0 bg-cover bg-center transition-opacity duration-[2000ms] ease-in-out"
+            style={{
+              backgroundImage: `url('${img}')`,
+              opacity: i === activeIndex ? 1 : 0,
+            }}
+          />
+        ))}
 
-        {/* Fallback: imagen estática si el video tarda o falla */}
+        {/* Brillo sutil animado sobre la zona del rótulo (efecto cinemagraph) */}
         <div
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-            showPoster ? "opacity-100" : "opacity-0"
-          }`}
-          style={{ backgroundImage: `url('${HERO_POSTER}')` }}
+          className="absolute z-10"
+          style={{
+            top: "10%",
+            right: "15%",
+            width: "300px",
+            height: "100px",
+            background:
+              "radial-gradient(ellipse, rgba(254,166,25,0.15) 0%, transparent 70%)",
+            filter: "blur(30px)",
+            animation: "cinemaPulse 3s ease-in-out infinite",
+          }}
         />
       </div>
 
-      {/* === OVERLAY OSCURO para legibilidad del texto === */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-
-      {/* === TEXTO (H1 + subtítulo + CTAs) === */}
+      {/* === TEXTO: flotando sobre el fondo, sin taparlo === */}
       <div className="relative z-20 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-0">
         <div className="max-w-2xl">
-          {/* Badge */}
+          {/* Badge - vidrio esmerilado sutil */}
           <div
             className={`transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
             }`}
             style={{ transitionDelay: "100ms" }}
           >
-            <span className="inline-block py-2 px-4 rounded-full bg-secondary-container text-on-secondary-container font-inter text-xs font-bold uppercase tracking-wider shadow-lg">
+            <span className="inline-block py-2 px-4 rounded-full bg-black/40 backdrop-blur-md text-secondary-container font-inter text-xs font-bold uppercase tracking-wider border border-white/10">
               Rótulos en Paterna · Desde 2008
             </span>
           </div>
 
-          {/* H1 */}
+          {/* H1 - texto con sombra para leer sobre cualquier fondo */}
           <h1
-            className={`mt-6 font-montserrat text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-none text-white drop-shadow-2xl transition-all duration-1000 ${
+            className={`mt-6 font-montserrat text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-none tracking-tight transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
             }`}
-            style={{ transitionDelay: "200ms" }}
+            style={{
+              transitionDelay: "200ms",
+              color: "white",
+              textShadow:
+                "0 2px 10px rgba(0,0,0,0.7), 0 0 60px rgba(0,0,0,0.4)",
+            }}
           >
             Rótulos en Paterna que hacen tu negocio{" "}
-            <span className="text-secondary-container drop-shadow-lg">
+            <span
+              style={{
+                color: "#fea619",
+                textShadow:
+                  "0 2px 10px rgba(0,0,0,0.7), 0 0 60px rgba(0,0,0,0.4)",
+              }}
+            >
               imposible de ignorar
             </span>
           </h1>
 
           {/* Subtítulo */}
           <p
-            className={`mt-6 font-inter text-lg md:text-xl text-white/90 max-w-xl leading-relaxed drop-shadow-md transition-all duration-1000 ${
+            className={`mt-6 font-inter text-lg md:text-xl max-w-xl leading-relaxed transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
             }`}
-            style={{ transitionDelay: "300ms" }}
+            style={{
+              transitionDelay: "300ms",
+              color: "white",
+              textShadow: "0 1px 8px rgba(0,0,0,0.8)",
+            }}
           >
             Letras corpóreas, rotulación de fachadas, vinilos y rotulación de
             vehículos en Paterna. Fabricación propia. Presupuesto sin
@@ -129,7 +131,7 @@ export function Hero() {
           >
             <button
               onClick={() => handleScrollTo("#contacto")}
-              className="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-montserrat text-lg font-bold hover:shadow-2xl hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 shadow-lg"
+              className="bg-[#fea619] text-[#0b1c30] px-8 py-4 rounded-lg font-montserrat text-lg font-bold hover:shadow-2xl hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 shadow-lg"
             >
               Solicitar Presupuesto Gratis
               <span className="material-symbols-outlined">arrow_forward</span>
@@ -161,9 +163,9 @@ export function Hero() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full border border-white/20"
+                className="flex items-center gap-2 bg-black/30 backdrop-blur-md px-4 py-2 rounded-full border border-white/10"
               >
-                <span className="material-symbols-outlined text-secondary-container text-lg">
+                <span className="material-symbols-outlined text-[#fea619] text-lg">
                   {item.icon}
                 </span>
                 <span className="font-inter text-sm font-semibold text-white">
@@ -182,8 +184,10 @@ export function Hero() {
         }`}
         style={{ transitionDelay: "800ms" }}
       >
-        <div className="animate-bounce bg-white/15 backdrop-blur-md rounded-full p-2 border border-white/20">
-          <span className="material-symbols-outlined text-white">keyboard_arrow_down</span>
+        <div className="animate-bounce bg-black/30 backdrop-blur-md rounded-full p-2 border border-white/10">
+          <span className="material-symbols-outlined text-white">
+            keyboard_arrow_down
+          </span>
         </div>
       </div>
     </section>
