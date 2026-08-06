@@ -152,7 +152,7 @@ export function PaternaServices() {
             <h3 className="font-montserrat text-2xl md:text-3xl font-bold mb-4 text-secondary-container">
               ¿Negocio en Paterna? Te ayudamos a destacar
             </h3>
-            <p className="font-inter text-base md:text-lg text-on-primary-container max-w-xl mx-auto mb-8">
+            <p className="font-inter text-base md:text-lg text-white max-w-xl mx-auto mb-8">
               Cuéntanos tu idea y te asesoramos sin compromiso con la mejor
               solución de rotulación para tu proyecto en Paterna.
             </p>
