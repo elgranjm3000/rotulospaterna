@@ -9,8 +9,7 @@ const paternaServices = [
     description:
       "Diseñamos y fabricamos rótulos a medida para tu negocio en Paterna. Desde rótulos comerciales hasta señalética corporativa, con los mejores materiales y acabados profesionales que garantizan durabilidad y máximo impacto visual.",
     icon: "precision_manufacturing",
-    image:
-      "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/rotulos/images3.jpeg",
     alt: "Fabricación profesional de rótulos en taller",
   },
   {
@@ -18,8 +17,7 @@ const paternaServices = [
     description:
       "Letras corpóreas con relieve y elegancia para tu fachada en Paterna. Trabajamos acero inoxidable, aluminio, PVC y metacrilato. Iluminación LED integrada para que tu marca destaque de día y de noche con un acabado impecable.",
     icon: "text_fields",
-    image:
-      "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/rotulos/images6.jpeg",
     alt: "Letras corpóreas de acero instaladas en fachada",
   },
   {
@@ -27,8 +25,7 @@ const paternaServices = [
     description:
       "Transformamos la fachada de tu local en Paterna en una poderosa herramienta de ventas. Instalamos vinilos de corte, láminas de control solar, microperforados y rotulación integral para escaparates que captan la atención de cada transeúnte.",
     icon: "storefront",
-    image:
-      "https://images.pexels.com/photos/2694434/pexels-photo-2694434.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/rotulos/images4.jpeg",
     alt: "Rotulación profesional de fachada comercial",
   },
   {
@@ -36,8 +33,7 @@ const paternaServices = [
     description:
       "Convierte tu flota de vehículos en vallas publicitarias móviles. Rotulación integral de coches, furgonetas y camiones en Paterna con vinilos de alta resistencia. Diseño personalizado que proyecta profesionalidad en cada kilómetro recorrido.",
     icon: "directions_car",
-    image:
-      "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/rotulos/images5.jpeg",
     alt: "Rotulación integral de vehículos comerciales",
   },
 ];

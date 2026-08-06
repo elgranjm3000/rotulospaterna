@@ -9,22 +9,13 @@ import { useState, useEffect } from "react";
  */
 
 const signageImages = [
-  /* ① Rótulo fachada comercial / storefront shop sign */
-  "https://images.pexels.com/photos/256150/pexels-photo-256150.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* ② Caja de luz iluminada / LED lightbox sign */
-  "https://images.pexels.com/photos/5593197/pexels-photo-5593197.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* ③ Letras corpóreas 3D / acrylic dimensional letters */
-  "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* ④ Rótulo neón luminoso / glowing neon LED sign */
-  "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* ⑤ Rótulo tradicional clásico / classic signwriting */
-  "https://images.pexels.com/photos/189434/pexels-photo-189434.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* ⑥ Vinilo en cristalera / window decal vinyl graphic */
-  "https://images.pexels.com/photos/2694434/pexels-photo-2694434.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* ⑦ Señalética corporativa / professional signage */
-  "https://images.pexels.com/photos/3974774/pexels-photo-3974774.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* ⑧ Letrero exterior iluminado / outdoor illuminated */
-  "https://images.pexels.com/photos/3326871/pexels-photo-3326871.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  "/rotulos/images.jpeg",
+  "/rotulos/images1.jpeg",
+  "/rotulos/images2.jpeg",
+  "/rotulos/images3.jpeg",
+  "/rotulos/images4.jpeg",
+  "/rotulos/images5.jpeg",
+  "/rotulos/images6.jpeg",
 ];
 
 export function Hero() {
