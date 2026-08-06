@@ -395,6 +395,10 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
             <div className="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop py-16">
               <div className="prose prose-lg max-w-none">
                 {article.content.split("\n").map((line, index) => {
+                  // Helper: convierte **texto** en HTML real
+                  const formatLine = (text: string) =>
+                    text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
                   if (line.startsWith("## ")) {
                     return (
                       <h2 key={index} className="font-montserrat text-2xl md:text-3xl font-bold text-primary mt-12 mb-6">
@@ -412,7 +416,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                   if (line.startsWith("- ")) {
                     return (
                       <li key={index} className="font-inter text-base text-on-surface leading-relaxed">
-                        {line.replace("- ", "").replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")}
+                        <span dangerouslySetInnerHTML={{ __html: formatLine(line.replace("- ", "")) }} />
                       </li>
                     );
                   }
@@ -420,7 +424,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                     return (
                       <li key={index} className="font-inter text-base text-on-surface leading-relaxed flex items-start gap-2">
                         <span className="text-2xl">{line.startsWith("✅") ? "✅" : "❌"}</span>
-                        <span>{line.substring(2)}</span>
+                        <span dangerouslySetInnerHTML={{ __html: formatLine(line.substring(2)) }} />
                       </li>
                     );
                   }
@@ -430,9 +434,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                         key={index}
                         className="border-l-4 border-secondary-container pl-4 py-2 my-6 bg-secondary-container/10 rounded-r"
                       >
-                        <p className="font-inter text-lg italic text-on-surface">
-                          {line.replace("> ", "")}
-                        </p>
+                        <p className="font-inter text-lg italic text-on-surface" dangerouslySetInnerHTML={{ __html: formatLine(line.replace("> ", "")) }} />
                       </blockquote>
                     );
                   }
@@ -446,9 +448,8 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                                 <th
                                   key={i}
                                   className="px-6 py-3 text-left text-xs font-medium text-on-surface uppercase tracking-wider"
-                                >
-                                  {cell.trim()}
-                                </th>
+                                  dangerouslySetInnerHTML={{ __html: formatLine(cell.trim()) }}
+                                />
                               ))}
                             </tr>
                           </thead>
@@ -459,17 +460,8 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                   if (line.trim() === "") {
                     return <br key={index} />;
                   }
-                  if (line.includes("**")) {
-                    return (
-                      <p key={index} className="font-inter text-base text-on-surface leading-relaxed mb-4">
-                        {line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")}
-                      </p>
-                    );
-                  }
                   return (
-                    <p key={index} className="font-inter text-base text-on-surface leading-relaxed mb-4">
-                      {line}
-                    </p>
+                    <p key={index} className="font-inter text-base text-on-surface leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: formatLine(line) }} />
                   );
                 })}
               </div>
