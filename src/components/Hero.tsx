@@ -11,12 +11,14 @@ import { useState, useEffect } from "react";
  */
 
 const signageImages = [
-  /* Fachada comercial con rótulo luminoso */
-  "https://images.pexels.com/photos/2694434/pexels-photo-2694434.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* Letras corpóreas en edificio corporativo */
-  "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=1920",
-  /* Vehículo comercial rotulado */
-  "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  /* Rótulo luminoso de tienda - caja de luz comercial */
+  "https://images.pexels.com/photos/5593197/pexels-photo-5593197.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  /* Rótulo / letrero comercial en fachada */
+  "https://images.pexels.com/photos/256150/pexels-photo-256150.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  /* Señalética y rotulación corporativa */
+  "https://images.pexels.com/photos/3974774/pexels-photo-3974774.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  /* Rótulo luminoso tipo banderola / lightbox */
+  "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1920",
 ];
 
 export function Hero() {
