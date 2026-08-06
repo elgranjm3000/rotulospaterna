@@ -7,6 +7,11 @@
   --foreground: #0b1c30;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -14,9 +19,18 @@ body {
   overflow-x: hidden;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Evitar overflow en todos los elementos */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Forzar wrap en textos largos */
+h1, h2, h3, h4, p, a, span, li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 /* Material Symbols */
