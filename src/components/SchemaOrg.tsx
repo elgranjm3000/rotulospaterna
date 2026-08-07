@@ -40,9 +40,9 @@ const schemaOrg = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Fabricación de Rótulos en Paterna",
+          name: "Fabricación de Rótulos y Banderolas Luminosas en Paterna",
           description:
-            "Diseño y fabricación de rótulos a medida en Paterna. Rótulos comerciales, señalética corporativa y banderolas luminosas.",
+            "Diseño y fabricación de rótulos y banderolas luminosas a medida en Paterna. Rótulos comerciales, señalética corporativa, banderolas y cajones de luz LED.",
         },
       },
       {

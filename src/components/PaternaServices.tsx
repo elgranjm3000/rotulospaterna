@@ -5,12 +5,12 @@ import Image from "next/image";
 
 const paternaServices = [
   {
-    title: "Fabricación de Rótulos en Paterna",
+    title: "Fabricación de Rótulos y Banderolas Luminosas",
     description:
-      "Diseñamos y fabricamos rótulos a medida para tu negocio en Paterna. Desde rótulos comerciales hasta señalética corporativa, con los mejores materiales y acabados profesionales que garantizan durabilidad y máximo impacto visual.",
-    icon: "precision_manufacturing",
+      "Diseñamos y fabricamos rótulos y banderolas luminosas a medida para tu negocio en Paterna. Desde rótulos comerciales y señalética corporativa hasta banderolas y cajones de luz LED, con materiales premium y acabados profesionales que garantizan durabilidad y máximo impacto visual de día y de noche.",
+    icon: "lightbulb",
     image: "/rotulos/images3.jpeg",
-    alt: "Fabricación profesional de rótulos en taller",
+    alt: "Fabricación profesional de rótulos y banderolas luminosas en taller",
   },
   {
     title: "Fabricación de Letras Corpóreas en Paterna",
