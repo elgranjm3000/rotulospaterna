@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Logo } from "@/components/Logo";
 
 const navLinks = [
   { name: "Servicios", href: "/#servicios" },
@@ -41,12 +42,8 @@ export function Header() {
     >
       <nav className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4">
         {/* Logo */}
-        <a href="#" className="flex-shrink-0">
-          <img
-            src="/logo.png"
-            alt="Rótulos Paterna"
-            className="h-10 w-auto"
-          />
+        <a href="/" className="flex-shrink-0">
+          <Logo className="h-12 w-auto" />
         </a>
 
         {/* Desktop Nav - Centered */}

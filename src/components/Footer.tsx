@@ -1,6 +1,7 @@
 "use client";
 
 import { useFadeIn } from "@/hooks/useFadeIn";
+import { Logo } from "@/components/Logo";
 
 const footerLinks = {
   empresa: [
@@ -43,11 +44,7 @@ export function Footer() {
         {/* Brand Section */}
         <div className="max-w-xs">
           <div className="flex items-center gap-2 mb-4">
-            <img
-              src="/logo.png"
-              alt="Rótulos Paterna"
-              className="h-8 w-auto"
-            />
+            <Logo className="h-10 w-auto" />
           </div>
           <p className="font-inter text-base text-on-surface-variant leading-relaxed">
             Rótulos en Paterna: fabricación de letras corpóreas, rotulación
