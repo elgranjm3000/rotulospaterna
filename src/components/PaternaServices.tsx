@@ -17,8 +17,8 @@ const paternaServices = [
     description:
       "Letras corpóreas con relieve y elegancia para tu fachada en Paterna. Trabajamos acero inoxidable, aluminio, PVC y metacrilato. Iluminación LED integrada para que tu marca destaque de día y de noche con un acabado impecable.",
     icon: "text_fields",
-    image: "/rotulos/images6.jpeg",
-    alt: "Letras corpóreas de acero instaladas en fachada",
+    image: "/rotulos/corporea.jpeg",
+    alt: "Letras corpóreas doradas instaladas en fachada",
   },
   {
     title: "Rotulación de Fachadas en Paterna",
