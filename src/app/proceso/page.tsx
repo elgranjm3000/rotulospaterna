@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 export const metadata: Metadata = {
   title: "Proceso de Trabajo | Cómo Fabricamos Tus Rótulos en Paterna",
@@ -85,7 +88,9 @@ const steps = [
 
 export default function ProcesoPage() {
   return (
-    <div className="min-h-screen bg-surface">
+    <div className="flex flex-col flex-1 min-h-screen bg-surface">
+      <Header />
+      <main className="flex-1 pt-20">
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary via-primary-container to-primary py-24 md:py-32">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
@@ -180,6 +185,9 @@ export default function ProcesoPage() {
           </div>
         </div>
       </section>
+      </main>
+      <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }

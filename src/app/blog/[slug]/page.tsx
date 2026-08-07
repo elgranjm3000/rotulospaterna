@@ -1,22 +1,4 @@
 import { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { WhatsAppFloat } from "@/components/WhatsAppFloat";
-import { Montserrat, Inter } from "next/font/google";
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "600", "700", "800"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600"],
-});
 
 // Lista de artículos disponibles
 const articleSlugs = [
@@ -359,14 +341,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
   }
 
   return (
-    <html lang="es" className={`${montserrat.variable} ${inter.variable}`}>
-      <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      </head>
-      <body className="min-h-screen flex flex-col bg-surface">
-        <Header />
-        <main className="flex-1">
-          <article className="bg-surface">
+    <article className="bg-surface">
             {/* Hero del Artículo */}
             <div className="relative h-64 md:h-80 bg-surface-dim overflow-hidden">
               <div
@@ -511,11 +486,6 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                 </div>
               </div>
             </div>
-          </article>
-        </main>
-        <Footer />
-        <WhatsAppFloat />
-      </body>
-    </html>
+    </article>
   );
 }
