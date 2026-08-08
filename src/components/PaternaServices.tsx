@@ -5,12 +5,12 @@ import Image from "next/image";
 
 const paternaServices = [
   {
-    title: "Fabricación de Rótulos y Banderolas Luminosas",
+    title: "Banderolas Luminosas y Cajones de Luz LED",
     description:
-      "Diseñamos y fabricamos rótulos y banderolas luminosas a medida para tu negocio en Paterna. Desde rótulos comerciales y señalética corporativa hasta banderolas y cajones de luz LED, con materiales premium y acabados profesionales que garantizan durabilidad y máximo impacto visual de día y de noche.",
+      "Banderolas y cajones de luz LED a medida para tu negocio en Paterna. Diseño personalizado, materiales premium y acabados profesionales que garantizan máxima visibilidad y durabilidad tanto de día como de noche.",
     icon: "lightbulb",
     image: "/rotulos/images3.jpeg",
-    alt: "Fabricación profesional de rótulos y banderolas luminosas en taller",
+    alt: "Fabricación profesional de banderolas luminosas y cajones de luz LED",
   },
   {
     title: "Fabricación de Letras Corpóreas en Paterna",
@@ -66,6 +66,71 @@ export function PaternaServices() {
             profesionales en Paterna. Fabricación propia, materiales premium y
             equipo especializado.
           </p>
+        </div>
+
+        {/* Featured: Fabricación de Rótulos */}
+        <div
+          className={`mb-8 md:mb-12 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-700 overflow-hidden ${
+            sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
+          style={{ transitionDelay: sectionVisible ? "200ms" : "0ms" }}
+        >
+          <div className="flex flex-col md:flex-row">
+            {/* Image side */}
+            <div className="relative md:w-5/12 h-64 md:h-auto md:min-h-[320px] overflow-hidden">
+              <div
+                className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                style={{ backgroundImage: "url('/rotulos/fabricacion.jpeg')" }}
+                role="img"
+                aria-label="Taller de fabricación de rótulos en Paterna"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent md:bg-gradient-to-r md:from-black/30 md:via-transparent md:to-transparent" />
+              <div className="absolute top-4 left-4 w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center shadow-xl">
+                <span className="material-symbols-outlined text-on-secondary-container text-xl">
+                  precision_manufacturing
+                </span>
+              </div>
+            </div>
+            {/* Content side */}
+            <div className="md:w-7/12 p-6 md:p-10 flex flex-col justify-center">
+              <span className="inline-block py-1.5 px-3 rounded-full bg-secondary-container/10 text-secondary-container font-inter text-xs font-bold uppercase tracking-wider mb-3 self-start">
+                Fabricación propia
+              </span>
+              <h3 className="font-montserrat text-2xl md:text-3xl font-bold text-primary mb-4">
+                Fabricación de Rótulos en Paterna
+              </h3>
+              <p className="font-inter text-base text-on-surface leading-relaxed mb-6">
+                Fabricamos tus rótulos en nuestro taller propio en Paterna. Contamos con maquinaria
+                de última generación para producir rótulos comerciales, señalética corporativa,
+                banderolas y cajones de luz LED. Controlamos todo el proceso: desde el diseño
+                hasta la instalación final, garantizando acabados impecables y tiempos de entrega
+                ajustados a las necesidades de tu negocio.
+              </p>
+              <div className="flex items-center gap-4 flex-wrap">
+                <a
+                  href="#contacto"
+                  className="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-6 py-3 rounded-xl font-inter text-sm font-bold hover:shadow-lg transition-all"
+                >
+                  Solicitar Presupuesto
+                  <span className="material-symbols-outlined text-lg">arrow_forward</span>
+                </a>
+                <div className="flex items-center gap-3 text-on-surface-variant/60">
+                  <span className="font-inter text-xs flex items-center gap-1">
+                    <span className="material-symbols-outlined text-sm text-secondary-container">
+                      verified
+                    </span>
+                    Fabricación propia
+                  </span>
+                  <span className="font-inter text-xs flex items-center gap-1">
+                    <span className="material-symbols-outlined text-sm text-secondary-container">
+                      schedule
+                    </span>
+                    Entrega rápida
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Services Grid with Images */}

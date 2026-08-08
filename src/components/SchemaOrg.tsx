@@ -40,9 +40,18 @@ const schemaOrg = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Fabricación de Rótulos y Banderolas Luminosas en Paterna",
+          name: "Fabricación de Rótulos en Paterna",
           description:
-            "Diseño y fabricación de rótulos y banderolas luminosas a medida en Paterna. Rótulos comerciales, señalética corporativa, banderolas y cajones de luz LED.",
+            "Fabricación de rótulos en taller propio en Paterna. Rótulos comerciales, señalética corporativa, banderolas y cajones de luz LED con maquinaria profesional. Control integral desde diseño hasta instalación.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Banderolas Luminosas y Cajones de Luz LED en Paterna",
+          description:
+            "Banderolas y cajones de luz LED a medida en Paterna. Diseño personalizado con materiales premium y máxima visibilidad diurna y nocturna.",
         },
       },
       {
