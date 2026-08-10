@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { PaternaServices } from "@/components/PaternaServices";
+import { ManufacturingDetail } from "@/components/ManufacturingDetail";
 import { WhyUs } from "@/components/WhyUs";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSection } from "@/components/BlogSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex-1 pt-20">
         <Hero />
         <PaternaServices />
+        <ManufacturingDetail />
         <WhyUs />
         <ContactForm />
         <BlogSection />
