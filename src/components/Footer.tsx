@@ -8,16 +8,6 @@ const footerLinks = {
     { name: "Servicios", href: "#servicios" },
     { name: "Sobre Nosotros", href: "#nosotros" },
   ],
-  legal: [
-    { name: "Privacidad", href: "/privacidad" },
-    { name: "Aviso Legal", href: "/aviso-legal" },
-    { name: "Cookies", href: "/cookies" },
-  ],
-  soporte: [
-    { name: "Contacto", href: "#contacto" },
-    { name: "Preguntas Frecuentes", href: "/faq" },
-    { name: "Mapa Web", href: "/sitemap" },
-  ],
 };
 
 const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -53,57 +43,21 @@ export function Footer() {
           </p>
         </div>
 
-        {/* Links Sections */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-12">
-          {/* Empresa */}
-          <div className="flex flex-col gap-4">
-            <span className="font-inter text-sm font-semibold text-primary uppercase tracking-wider">
-              Empresa
-            </span>
-            {footerLinks.empresa.map((link) => (
-              <a
-                key={link.name}
-                className="font-inter text-base text-on-surface-variant hover:text-secondary-container transition-colors"
-                href={link.href}
-                onClick={(e) => handleScroll(e, link.href)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-
-          {/* Legal */}
-          <div className="flex flex-col gap-4">
-            <span className="font-inter text-sm font-semibold text-primary uppercase tracking-wider">
-              Legal
-            </span>
-            {footerLinks.legal.map((link) => (
-              <a
-                key={link.name}
-                className="font-inter text-base text-on-surface-variant hover:text-secondary-container transition-colors"
-                href={link.href}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-
-          {/* Soporte */}
-          <div className="flex flex-col gap-4">
-            <span className="font-inter text-sm font-semibold text-primary uppercase tracking-wider">
-              Soporte
-            </span>
-            {footerLinks.soporte.map((link) => (
-              <a
-                key={link.name}
-                className="font-inter text-base text-on-surface-variant hover:text-secondary-container transition-colors"
-                href={link.href}
-                onClick={(e) => handleScroll(e, link.href)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+        {/* Links */}
+        <div className="flex flex-col gap-4">
+          <span className="font-inter text-sm font-semibold text-primary uppercase tracking-wider">
+            Empresa
+          </span>
+          {footerLinks.empresa.map((link) => (
+            <a
+              key={link.name}
+              className="font-inter text-base text-on-surface-variant hover:text-secondary-container transition-colors"
+              href={link.href}
+              onClick={(e) => handleScroll(e, link.href)}
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
       </div>
 
