@@ -23,7 +23,7 @@ const paternaServices = [
   {
     title: "Rotulación de Fachadas en Paterna",
     description:
-      "Transformamos la fachada de tu local en Paterna en una poderosa herramienta de ventas. Instalamos vinilos de corte, láminas de control solar, microperforados y rotulación integral para escaparates que captan la atención de cada transeúnte.",
+      "Tu fachada es lo primero que ve un cliente potencial. La rotulamos con vinilos de corte de alta precisión, láminas de control solar que reducen el calor interior, vinilos microperforados que permiten ver hacia fuera y rotulación integral de escaparates con acabado impecable. Cada metro cuadrado de tu fachada trabaja 24/7 atrayendo clientes en Paterna.",
     icon: "storefront",
     image: "/rotulos/images4.jpeg",
     alt: "Rotulación profesional de fachada comercial",
