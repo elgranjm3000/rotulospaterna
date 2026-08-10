@@ -78,7 +78,10 @@ export default function BlogPage() {
                 <div className="relative h-48 bg-surface-dim overflow-hidden">
                   <div
                     className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                    style={{ backgroundImage: `url('${article.image}')` }}
+                    style={{
+                      backgroundImage: `url('${article.image}')`,
+                      clipPath: "ellipse(105% 92% at 50% 0%)",
+                    }}
                   />
                   <span className="absolute top-4 left-4 px-3 py-1 bg-secondary-container text-on-secondary-container text-xs font-semibold rounded-full">
                     {article.category}

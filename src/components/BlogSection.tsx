@@ -95,11 +95,14 @@ export function BlogSection() {
                 className="sr-only"
                 loading="lazy"
               />
-              {/* Image */}
+              {/* Image with organic clip mask */}
               <div className="relative h-48 bg-surface-dim overflow-hidden">
                 <div
                   className="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105"
-                  style={{ backgroundImage: `url('${post.image}')` }}
+                  style={{
+                    backgroundImage: `url('${post.image}')`,
+                    clipPath: "ellipse(105% 92% at 50% 0%)",
+                  }}
                   role="img"
                   aria-label={post.alt}
                 />

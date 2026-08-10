@@ -346,7 +346,10 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
             <div className="relative h-64 md:h-80 bg-surface-dim overflow-hidden">
               <div
                 className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url('${article.image}')` }}
+                style={{
+                  backgroundImage: `url('${article.image}')`,
+                  clipPath: "ellipse(105% 95% at 50% 0%)",
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-full flex flex-col justify-end pb-8">
