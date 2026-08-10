@@ -12,10 +12,6 @@ const signageImages = [
   "/rotulos/images.jpeg",
   "/rotulos/images1.jpeg",
   "/rotulos/images2.jpeg",
-  "/rotulos/images3.jpeg",
-  "/rotulos/images4.jpeg",
-  "/rotulos/images5.jpeg",
-  "/rotulos/images6.jpeg",
 ];
 
 export function Hero() {
