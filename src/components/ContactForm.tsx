@@ -4,12 +4,13 @@ import { useState, FormEvent } from "react";
 import { useFadeIn } from "@/hooks/useFadeIn";
 
 const projectTypes = [
-  "Rotulación Luminosa",
-  "Vinilos",
-  "Letras Corpóreas",
-  "Rotulación de Vehículos",
-  "Fabricación de Rótulos",
-  "Otro",
+  "Fabricación de rótulos",
+  "Impresión gran formato",
+  "Rotulación de fachadas",
+  "Rotulación de vehículos",
+  "Rotulación integral",
+  "Visita comercial",
+  "Otros",
 ];
 
 export function ContactForm() {
