@@ -8,6 +8,10 @@ const footerLinks = {
     { name: "Servicios", href: "#servicios" },
     { name: "Sobre Nosotros", href: "#nosotros" },
   ],
+  legal: [
+    { name: "Política de Privacidad", href: "/privacidad" },
+    { name: "Política de Cookies", href: "/cookies" },
+  ],
 };
 
 const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -39,25 +43,41 @@ export function Footer() {
           <p className="font-inter text-base text-on-surface-variant leading-relaxed">
             Rótulos en Paterna: fabricación de letras corpóreas, rotulación
             de fachadas, vinilos y rotulación de vehículos. Expertos
-            rotulistas en Paterna desde 2008.
+            rotulistas en Paterna.
           </p>
         </div>
 
         {/* Links */}
-        <div className="flex flex-col gap-4">
-          <span className="font-inter text-sm font-semibold text-primary uppercase tracking-wider">
-            Empresa
-          </span>
-          {footerLinks.empresa.map((link) => (
-            <a
-              key={link.name}
-              className="font-inter text-base text-on-surface-variant hover:text-secondary-container transition-colors"
-              href={link.href}
-              onClick={(e) => handleScroll(e, link.href)}
-            >
-              {link.name}
-            </a>
-          ))}
+        <div className="flex gap-12">
+          <div className="flex flex-col gap-4">
+            <span className="font-inter text-sm font-semibold text-primary uppercase tracking-wider">
+              Empresa
+            </span>
+            {footerLinks.empresa.map((link) => (
+              <a
+                key={link.name}
+                className="font-inter text-base text-on-surface-variant hover:text-secondary-container transition-colors"
+                href={link.href}
+                onClick={(e) => handleScroll(e, link.href)}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+          <div className="flex flex-col gap-4">
+            <span className="font-inter text-sm font-semibold text-primary uppercase tracking-wider">
+              Legal
+            </span>
+            {footerLinks.legal.map((link) => (
+              <a
+                key={link.name}
+                className="font-inter text-base text-on-surface-variant hover:text-secondary-container transition-colors"
+                href={link.href}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 
