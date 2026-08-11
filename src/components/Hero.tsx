@@ -2,29 +2,11 @@
 
 import { useState, useEffect } from "react";
 
-/*
- * CINEMAGRAPH: 8 tipos de rótulos reales que muestran
- * toda la gama de servicios de rotulación en Paterna.
- * Cada imagen representa una categoría distinta.
- */
-
-const signageImages = [
-  "/rotulos/images.jpeg",
-  "/rotulos/images1.jpeg",
-  "/rotulos/images2.jpeg",
-];
-
 export function Hero() {
-  const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  /* Ciclo de imágenes estilo cinemagraph - transición cada 5 segundos */
   useEffect(() => {
     setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % signageImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
   }, []);
 
   const handleScrollTo = (href: string) => {
@@ -33,39 +15,22 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      {/* === CINEMAGRAPH: imágenes de rótulos con transición suave === */}
+      {/* Fondo fijo con overlay de alto contraste */}
       <div className="absolute inset-0 z-0">
-        {signageImages.map((img, i) => (
-          <div
-            key={i}
-            className="absolute inset-0 bg-cover bg-center transition-opacity duration-[2000ms] ease-in-out"
-            style={{
-              backgroundImage: `url('${img}')`,
-              opacity: i === activeIndex ? 1 : 0,
-            }}
-          />
-        ))}
-
-        {/* Brillo sutil animado sobre la zona del rótulo (efecto cinemagraph) */}
         <div
-          className="absolute z-10"
-          style={{
-            top: "10%",
-            right: "15%",
-            width: "300px",
-            height: "100px",
-            background:
-              "radial-gradient(ellipse, rgba(254,166,25,0.15) 0%, transparent 70%)",
-            filter: "blur(30px)",
-            animation: "cinemaPulse 3s ease-in-out infinite",
-          }}
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{ backgroundImage: "url('/rotulos/hero-bg.jpeg')" }}
         />
+        {/* Overlay oscuro para legibilidad del texto */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/75" />
+        {/* Segundo overlay direccional para reforzar el lado del texto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
       </div>
 
-      {/* === TEXTO: flotando sobre el fondo, sin taparlo === */}
+      {/* TEXTO */}
       <div className="relative z-20 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-0">
         <div className="max-w-2xl">
-          {/* Badge - vidrio esmerilado sutil */}
+          {/* Badge */}
           <div
             className={`transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
@@ -77,7 +42,7 @@ export function Hero() {
             </span>
           </div>
 
-          {/* H1 - texto con sombra para leer sobre cualquier fondo */}
+          {/* H1 */}
           <h1
             className={`mt-6 font-montserrat text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-none tracking-tight transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
@@ -86,7 +51,7 @@ export function Hero() {
               transitionDelay: "200ms",
               color: "white",
               textShadow:
-                "0 2px 10px rgba(0,0,0,0.7), 0 0 60px rgba(0,0,0,0.4)",
+                "0 2px 4px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.7), 0 0 80px rgba(0,0,0,0.5)",
             }}
           >
             Rótulos en Paterna que hacen tu negocio{" "}
@@ -94,7 +59,7 @@ export function Hero() {
               style={{
                 color: "#fea619",
                 textShadow:
-                  "0 2px 10px rgba(0,0,0,0.7), 0 0 60px rgba(0,0,0,0.4)",
+                  "0 2px 4px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.7), 0 0 80px rgba(0,0,0,0.5)",
               }}
             >
               imposible de ignorar
@@ -109,7 +74,7 @@ export function Hero() {
             style={{
               transitionDelay: "300ms",
               color: "white",
-              textShadow: "0 1px 8px rgba(0,0,0,0.8)",
+              textShadow: "0 1px 4px rgba(0,0,0,0.9), 0 2px 16px rgba(0,0,0,0.6)",
             }}
           >
             Letras corpóreas, rotulación de fachadas, vinilos y rotulación de
