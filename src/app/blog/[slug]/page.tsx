@@ -342,6 +342,23 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
 
   return (
     <article className="bg-surface">
+            {/* Breadcrumbs */}
+            <nav aria-label="Breadcrumb" className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-24 pb-0">
+              <ol className="flex items-center gap-2 font-inter text-sm text-on-surface-variant">
+                <li>
+                  <a href="/" className="hover:text-secondary-container transition-colors">Inicio</a>
+                </li>
+                <li aria-hidden="true" className="text-on-surface-variant/40">/</li>
+                <li>
+                  <a href="/blog" className="hover:text-secondary-container transition-colors">Blog</a>
+                </li>
+                <li aria-hidden="true" className="text-on-surface-variant/40">/</li>
+                <li className="text-on-surface font-medium truncate max-w-[200px] md:max-w-xs" aria-current="page">
+                  {article.title}
+                </li>
+              </ol>
+            </nav>
+
             {/* Hero del Artículo */}
             <div className="relative h-64 md:h-80 bg-surface-dim overflow-hidden">
               <div
