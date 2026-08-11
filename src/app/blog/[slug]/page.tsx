@@ -356,16 +356,9 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                 <span className="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-xs font-semibold rounded-full w-fit mb-4">
                   {article.category}
                 </span>
-                <h1 className="font-montserrat text-3xl md:text-4xl font-bold text-white mb-2">
+                <h1 className="font-montserrat text-3xl md:text-4xl font-bold text-white">
                   {article.title}
                 </h1>
-                <time className="font-inter text-sm text-white/80">
-                  {new Date(article.date).toLocaleDateString("es-ES", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </time>
               </div>
             </div>
 
