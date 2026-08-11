@@ -116,19 +116,6 @@ export function BlogSection() {
 
               {/* Content */}
               <div className="p-6">
-                {/* Meta */}
-                <div className="flex items-center gap-3 mb-3 text-xs text-on-surface-variant">
-                  <time dateTime={post.date}>
-                    {new Date(post.date).toLocaleDateString("es-ES", {
-                      day: "numeric",
-                      month: "short",
-                      year: "numeric",
-                    })}
-                  </time>
-                  <span>•</span>
-                  <span>{post.readTime} lectura</span>
-                </div>
-
                 {/* Title */}
                 <h3 className="font-montserrat text-xl font-bold mb-3 text-primary leading-tight">
                   <a
