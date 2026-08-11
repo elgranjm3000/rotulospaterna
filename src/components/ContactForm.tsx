@@ -261,7 +261,7 @@ export function ContactForm() {
                 }`}
                 style={{ transitionDelay: "200ms" }}
               >
-                <div className="relative h-72 bg-surface-container">
+                <div className="relative h-80 md:h-96 bg-surface-container">
                   {/* Map Label */}
                   <div className="absolute top-4 left-4 z-10 bg-white px-5 py-3 rounded-xl shadow-lg border-2 border-surface-container">
                     <p className="font-montserrat text-base font-bold text-primary flex items-center gap-2">
