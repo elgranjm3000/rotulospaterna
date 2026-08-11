@@ -56,7 +56,7 @@ export function PaternaServices() {
           }`}
         >
           <span className="inline-block py-2 px-4 rounded-full bg-secondary-container/10 text-secondary-container font-inter text-sm font-bold uppercase tracking-wider mb-4">
-            Especialistas en Paterna
+            Rotulista especialista en Paterna
           </span>
           <h2 className="font-montserrat text-3xl md:text-5xl font-bold mb-4 text-primary">
             Servicios de Rotulación en Paterna

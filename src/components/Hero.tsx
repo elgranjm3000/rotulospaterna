@@ -73,7 +73,7 @@ export function Hero() {
             style={{ transitionDelay: "100ms" }}
           >
             <span className="inline-block py-2 px-4 rounded-full bg-black/40 backdrop-blur-md text-secondary-container font-inter text-xs font-bold uppercase tracking-wider border border-white/10">
-              Rótulos en Paterna · Desde 2008
+              Rótulos en Paterna
             </span>
           </div>
 
@@ -149,7 +149,6 @@ export function Hero() {
           >
             {[
               { icon: "verified", text: "+15 años experiencia" },
-              { icon: "star", text: "+500 proyectos" },
               { icon: "location_on", text: "Paterna y alrededores" },
             ].map((item, i) => (
               <div
