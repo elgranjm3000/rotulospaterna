@@ -102,13 +102,6 @@ export default function CookiesPage() {
               .
             </p>
 
-            <p className="text-sm text-on-surface-variant mt-12">
-              Última actualización: {new Date().toLocaleDateString("es-ES", {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              })}
-            </p>
           </div>
         </article>
       </main>
