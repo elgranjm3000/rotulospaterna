@@ -278,13 +278,10 @@ export function ContactForm() {
                   {/* Google Maps - Wide view of Paterna (zoom level 13) */}
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24614.20948133683!2d-0.4615!3d39.5015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f5e5e5e5e5e5%3A0x1234567890abcdef!2sPaterna%2C+Valencia!5e0!3m2!1ses!2ses!4v1722000000000!5m2!1ses!2ses"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="grayscale hover:grayscale-0 transition-all duration-500"
+                    className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
                     title="Paterna, Valencia - Área de servicio de Rótulos Paterna"
                   />
                 </div>
