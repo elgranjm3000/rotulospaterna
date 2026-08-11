@@ -1,10 +1,14 @@
 "use client";
 
-const whatsappNumber = "34620049872"; // +34 620 049 872
+const whatsappNumber = "34620049872";
+const whatsappMessage = "HOLA ROTULOS PATERNA";
 
 export function WhatsAppFloat() {
   const handleClick = () => {
-    window.open(`https://wa.me/${whatsappNumber}`, "_blank");
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
+      "_blank"
+    );
   };
 
   return (
