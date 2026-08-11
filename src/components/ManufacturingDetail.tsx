@@ -251,7 +251,7 @@ export function ManufacturingDetail() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
                 <div
                   className="w-full h-full bg-cover bg-center"
-                  style={{ backgroundImage: "url('/rotulos/corporea.jpeg')" }}
+                  style={{ backgroundImage: "url('/rotulos/corporea-detalle.jpeg')" }}
                   role="img"
                   aria-label="Letras corpóreas doradas fabricadas en taller"
                 />
