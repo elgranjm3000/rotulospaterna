@@ -7,6 +7,7 @@ const footerLinks = {
   empresa: [
     { name: "Servicios", href: "#servicios" },
     { name: "Sobre Nosotros", href: "#nosotros" },
+    { name: "Proceso de Fabricación", href: "/proceso" },
   ],
   legal: [
     { name: "Política de Privacidad", href: "/privacidad" },

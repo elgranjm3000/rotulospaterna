@@ -78,7 +78,7 @@ const steps = [
     description:
       "Todos nuestros trabajos incluyen garantía por escrito. Además, ofrecemos servicio de mantenimiento para que tu rótulo luzca siempre como el primer día. Limpieza, revisión de iluminación y repaso de vinilos.",
     details: [
-      "Garantía de 3 años en todos los trabajos",
+      "Garantía en todos los trabajos",
       "Servicio de mantenimiento periódico disponible",
       "Reparación rápida en caso de incidencia",
       "Limpieza profesional para mantener la imagen impecable",
