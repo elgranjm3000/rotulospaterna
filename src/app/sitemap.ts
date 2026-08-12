@@ -41,33 +41,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Páginas
     {
-      url: `${baseUrl}/proceso`,
+      url: `${baseUrl}/proceso/`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: `${baseUrl}/blog/`,
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     // Artículos del blog
     ...blogSlugs.map((slug) => ({
-      url: `${baseUrl}/blog/${slug}`,
+      url: `${baseUrl}/blog/${slug}/`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
     // Legales
     {
-      url: `${baseUrl}/privacidad`,
+      url: `${baseUrl}/privacidad/`,
       lastModified: now,
       changeFrequency: "yearly" as const,
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/cookies`,
+      url: `${baseUrl}/cookies/`,
       lastModified: now,
       changeFrequency: "yearly" as const,
       priority: 0.3,

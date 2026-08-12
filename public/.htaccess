@@ -12,17 +12,10 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-# Quitar trailing slash (excepto raíz)
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [R=301,L]
-
-# Redirigir .html a URL limpia
-RewriteCond %{THE_REQUEST} \.html
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
-
-# Servir .html cuando exista (basado en URL, no en filesystem)
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [L]
+# Forzar trailing slash (excepto archivos y raíz)
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,4}$
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
 </IfModule>
 
 # Página 404 personalizada
