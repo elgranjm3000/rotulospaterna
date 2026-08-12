@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "Rótulos Paterna",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.png?v=3",
         width: 1200,
         height: 630,
         alt: "Rótulos Paterna - Fabricación de rótulos en Paterna",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Rótulos Paterna | Rótulos en Paterna",
     description:
       "Fabricación de rótulos, letras corpóreas, rotulación de fachadas y vehículos en Paterna. Expertos en rotulación. ¡Presupuesto gratis!",
-    images: ["/og-image.png"],
+    images: ["/og-image.png?v=3"],
   },
   robots: {
     index: true,
