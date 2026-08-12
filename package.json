@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp public/.htaccess out/.htaccess && for d in out/blog/*/ out/cookies/ out/privacidad/ out/proceso/ out/_not-found/; do [ -d \"$d\" ] && [ -f \"${d%/}.html\" ] && rm -rf \"$d\"; done && echo 'cleaned shadow dirs'",
+    "build": "next build && cp public/.htaccess out/.htaccess",
     "start": "next start",
     "lint": "eslint"
   },
