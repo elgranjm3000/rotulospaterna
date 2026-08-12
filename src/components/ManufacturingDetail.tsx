@@ -38,7 +38,7 @@ export function ManufacturingDetail() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
                 <div
                   className="w-full h-full bg-cover bg-center"
-                  style={{ backgroundImage: "url('/rotulos/images3.jpeg')" }}
+                  style={{ backgroundImage: "url('/rotulos/rotulos-luminosos.jpeg')" }}
                   role="img"
                   aria-label="Fabricación de rótulos luminosos y banderolas LED en taller"
                 />
