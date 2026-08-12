@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 $name    = isset($_POST['name'])    ? trim(strip_tags($_POST['name']))    : '';
 $email   = isset($_POST['email'])   ? trim(strip_tags($_POST['email']))   : '';
 $phone   = isset($_POST['phone'])   ? trim(strip_tags($_POST['phone']))   : '';
-$project = isset($_POST['project']) ? trim(strip_tags($_POST['project'])) : '';
+$project = isset($_POST['projectType']) ? trim(strip_tags($_POST['projectType'])) : '';
 $message = isset($_POST['message']) ? trim(strip_tags($_POST['message'])) : '';
 
 // Validar campos requeridos
