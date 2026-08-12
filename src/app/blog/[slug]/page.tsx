@@ -350,7 +350,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                 </li>
                 <li aria-hidden="true" className="text-on-surface-variant/40">/</li>
                 <li>
-                  <a href="/blog" className="hover:text-secondary-container transition-colors">Blog</a>
+                  <a href="/blog/" className="hover:text-secondary-container transition-colors">Blog</a>
                 </li>
                 <li aria-hidden="true" className="text-on-surface-variant/40">/</li>
                 <li className="text-on-surface font-medium truncate max-w-[200px] md:max-w-xs" aria-current="page">
@@ -482,7 +482,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                     .map(([slug, relatedArticle]) => (
                       <a
                         key={slug}
-                        href={`/blog/${slug}`}
+                        href={`/blog/${slug}/`}
                         className="block bg-white rounded-xl shadow p-4 hover:shadow-lg transition-shadow"
                       >
                         <span className="text-xs text-secondary-container font-semibold">

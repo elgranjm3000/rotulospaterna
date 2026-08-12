@@ -119,7 +119,7 @@ export function BlogSection() {
                 {/* Title */}
                 <h3 className="font-montserrat text-xl font-bold mb-3 text-primary leading-tight">
                   <a
-                    href={`/blog/${post.slug}`}
+                    href={`/blog/${post.slug}/`}
                     className="hover:text-secondary-container transition-colors"
                   >
                     {post.title}
@@ -133,7 +133,7 @@ export function BlogSection() {
 
                 {/* CTA */}
                 <a
-                  href={`/blog/${post.slug}`}
+                  href={`/blog/${post.slug}/`}
                   className="inline-flex items-center text-secondary-container font-inter text-sm font-semibold gap-1 group-hover:gap-2 transition-all"
                   aria-label={`Leer más sobre ${post.title}`}
                 >

@@ -72,7 +72,7 @@ export default function BlogPage() {
             {articles.map((article) => (
               <Link
                 key={article.slug}
-                href={`/blog/${article.slug}`}
+                href={`/blog/${article.slug}/`}
                 className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all"
               >
                 <div className="relative h-48 bg-surface-dim overflow-hidden">
