@@ -1,4 +1,5 @@
 # Rótulos Paterna - Configuración Apache / cPanel
+Options -Indexes
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -11,18 +12,13 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-# URLs limpias sin .html
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [L]
-
-# Forzar trailing slash en directorios
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^(.+[^/])$ $1/ [R=301,L]
-
-# Redirigir .html a URL limpia
+# Redirigir .html a URL limpia (primero, para evitar bucles)
 RewriteCond %{THE_REQUEST} \.html
 RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# Servir .html cuando exista, incluso si hay un directorio con el mismo nombre
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*[^/])$ $1.html [L]
 </IfModule>
 
 # Página 404 personalizada
