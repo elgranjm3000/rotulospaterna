@@ -23,13 +23,31 @@ export function ContactForm() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus("idle");
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-    setSubmitStatus("success");
+    try {
+      const res = await fetch("/api/send-mail.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        setSubmitStatus("success");
+        form.reset();
+      } else {
+        const data = await res.json();
+        setSubmitStatus("error");
+        console.error("Form error:", data.error);
+      }
+    } catch {
+      setSubmitStatus("error");
+    }
+
     setIsSubmitting(false);
-
-    setTimeout(() => setSubmitStatus("idle"), 3000);
+    setTimeout(() => setSubmitStatus("idle"), 5000);
   };
 
   return (
@@ -88,6 +106,27 @@ export function ContactForm() {
                   <p className="font-inter text-lg text-on-surface-variant">
                     Te contactaremos en menos de 24 horas.
                   </p>
+                </div>
+              ) : submitStatus === "error" ? (
+                <div className="h-full flex flex-col items-center justify-center text-center p-16">
+                  <div className="w-24 h-24 bg-gradient-to-br from-red-400 to-red-500 rounded-full flex items-center justify-center mb-8 shadow-lg">
+                    <span className="material-symbols-outlined text-white text-5xl">
+                      error
+                    </span>
+                  </div>
+                  <h3 className="font-montserrat text-3xl font-bold mb-3 text-primary">
+                    Error al enviar
+                  </h3>
+                  <p className="font-inter text-lg text-on-surface-variant mb-6">
+                    No se pudo enviar el mensaje. Inténtalo de nuevo o contáctanos por WhatsApp.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setSubmitStatus("idle")}
+                    className="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-xl font-inter text-sm font-bold hover:shadow-lg transition-all"
+                  >
+                    Volver al formulario
+                  </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="p-10 space-y-6">
